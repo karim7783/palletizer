@@ -1,0 +1,5 @@
+Kernel build needs to be executed using the following 4 steps:
+1) Copy /boot/config-KERNEL_VERSION to .config in the kernel source directory.
+2) Run make allmodconfig (modular support for any new kernel features that dont exist in our older kernel config)
+3) make rpm
+4) mv /root/rpmbuild/RPMS/x86_64 into our docker volume and spin down the container
